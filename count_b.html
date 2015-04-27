@@ -1,0 +1,24 @@
+<script>
+
+  function countChars(str, letter) {
+    counter = 0;
+    for (var i = 0; i < str.length; i++) {
+      if (str.charAt(i) == letter) { counter++}
+    }
+    return counter
+  }
+
+  function countBs(str) {
+    counter = 0;
+    for (var i = 0; i < str.length; i++) {
+      if (str.charAt(i) == "B") { counter++}
+    }
+    return counter
+  }
+
+
+  console.log(countBs("BadBoys"))
+  console.log(countChars("BadBoys", "B"))
+  console.log(countChars("BadBoys", "a"))
+
+</script>
