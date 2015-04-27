@@ -1,0 +1,26 @@
+<script>
+
+
+  function range(start, end, step) {
+    result = []
+    for(var i = start; i <= end; i = i + step) {
+      result.push(i)
+    }
+    return result
+  }
+
+  function sum(somerange){
+    result = 0;
+    for(var i = 0; i < somerange.length; i++){
+      result += somerange[i]
+    }
+    return result
+  }
+
+  console.log(range(1,10, 1))
+  console.log(range(1,10, 2))
+  console.log(range(5,2, 2))
+  console.log(sum(range(1,10, 1)))
+
+
+</script>

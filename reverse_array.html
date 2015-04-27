@@ -1,0 +1,24 @@
+<script>
+
+  function reverseArrayInPlace(foo){
+    newfoo = reverseArray(foo)
+    for(var i=0; i<foo.length; i++) {
+      foo[i] = newfoo[i]
+    }
+  }
+  function reverseArray(foo){
+    result = []
+    for(var i=0; i<foo.length; i++) {
+      result.unshift(foo[i])
+    }
+    return result
+  }
+
+  console.log(reverseArray([1,2]))
+  var yeah = [1,3,4];
+  reverseArrayInPlace(yeah)
+  console.log(yeah)
+
+</script>
+
+
