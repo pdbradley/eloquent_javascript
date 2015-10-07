@@ -1,0 +1,9 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+arrayToList	/Users/philip/code/eloquent_javascript/ch4/a_list.html	/^  function arrayToList(somearray) {$/;"	f	language:HTML
+listToArray	/Users/philip/code/eloquent_javascript/ch4/a_list.html	/^  function listToArray(somelist) {$/;"	f	language:HTML
+nth	/Users/philip/code/eloquent_javascript/ch4/a_list.html	/^  function nth(list, position) {$/;"	f	language:HTML
+prepend	/Users/philip/code/eloquent_javascript/ch4/a_list.html	/^  function prepend(element, list) {$/;"	f	language:HTML
+range	/Users/philip/code/eloquent_javascript/ch4/sum_range.html	/^  function range(start, end, step) {$/;"	f	language:HTML
+reverseArray	/Users/philip/code/eloquent_javascript/ch4/reverse_array.html	/^  function reverseArray(foo){$/;"	f	language:HTML
+reverseArrayInPlace	/Users/philip/code/eloquent_javascript/ch4/reverse_array.html	/^  function reverseArrayInPlace(foo){$/;"	f	language:HTML
+sum	/Users/philip/code/eloquent_javascript/ch4/sum_range.html	/^  function sum(somerange){$/;"	f	language:HTML
