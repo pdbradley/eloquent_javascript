@@ -1,0 +1,45 @@
+<script>
+
+
+function is_object(x) {
+  return (typeof(x) == "object") && (x != null)
+}
+
+
+function deepEqualobject(obj_1, obj_2) {
+  for (i in obj_1) {
+    if (!deepEqual(obj_1[i], obj_2[i])) {
+      return false
+    }
+  return true
+  }
+}
+
+
+function deepEqual(obj_1, obj_2) {
+  if (is_object(obj_1) || is_object(obj_2))
+  {
+    return deepEqualobject(obj_1, obj_2)
+  }
+  else { return (obj_1 === obj_2) }
+}
+
+
+
+
+
+
+// Your code here.
+console.log(deepEqual(2, 2));
+// → true
+console.log(deepEqual(3, 2));
+// → false
+
+var obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
+</script>
