@@ -7,3 +7,30 @@ var result = arrays.reduce(
   },[]);
 
 console.log(result);
+
+
+/* Mother child age difference */
+require('./ancestry.js');
+/* had to make it global baaaaaad :)   */
+
+var ancestry = JSON.parse(ANCESTRY_FILE);
+var byName = {};
+ancestry.forEach(function(person) {
+    byName[person.name] = person;
+});
+
+ancestry.forEach(function(person) {
+  console.log(person.name);
+  console.log(person.mother);
+  console.log(momsBirthAgeFor(person.name));
+});
+
+
+
+function momsBirthAgeFor(name){
+  p = byName[name]
+  if(p != null)
+    return p.born;
+  else
+    return null;
+}
