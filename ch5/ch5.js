@@ -20,17 +20,37 @@ ancestry.forEach(function(person) {
 });
 
 ancestry.forEach(function(person) {
-  console.log(person.name);
+/*  console.log(person.name + person.born);
   console.log(person.mother);
-  console.log(momsBirthAgeFor(person.name));
+  console.log(momsBirthYearFor(person));*/
+  console.log(momsBirthAgeFor(person));
 });
 
+var ages = ancestry.reduce(
+  function(result, person) {
+    return result.concat(momsBirthAgeFor(person))
+  },[]);
 
+ages = ages.filter(Number);
+console.log(ages);
+console.log(average(ages));
 
-function momsBirthAgeFor(name){
-  p = byName[name]
-  if(p != null)
-    return p.born;
+function momsBirthYearFor(person){
+  var mom = byName[person.mother];
+  if (mom)
+    return mom.born;
   else
     return null;
+}
+
+function momsBirthAgeFor(person){
+  if (momsBirthYearFor(person))
+    return person.born - momsBirthYearFor(person)
+  else
+    return null;
+}
+
+function average(array) {
+  function plus(a,b) { return a+b}
+  return array.reduce(plus) / array.length
 }
