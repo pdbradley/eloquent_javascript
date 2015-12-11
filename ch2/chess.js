@@ -1,0 +1,13 @@
+  var board = '';
+  var size = 12 
+
+  for(var i=1; i <= size; i++) {
+    for(var j=1; j <= size; j++) {
+      board += ((j + i) % 2 == 0) ? '#' : ' '
+      if (j % size == 0)
+        board += "\n"
+
+    }
+  }
+  console.log(board)
+
