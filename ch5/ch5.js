@@ -22,8 +22,8 @@ ancestry.forEach(function(person) {
 ancestry.forEach(function(person) {
 /*  console.log(person.name + person.born);
   console.log(person.mother);
-  console.log(momsBirthYearFor(person));*/
-  console.log(momsBirthAgeFor(person));
+  console.log(momsBirthYearFor(person));
+  console.log(momsBirthAgeFor(person));*/
 });
 
 var ages = ancestry.reduce(
@@ -37,17 +37,11 @@ console.log(average(ages));
 
 function momsBirthYearFor(person){
   var mom = byName[person.mother];
-  if (mom)
-    return mom.born;
-  else
-    return null;
+  return mom ? mom.born : null;
 }
 
 function momsBirthAgeFor(person){
-  if (momsBirthYearFor(person))
-    return person.born - momsBirthYearFor(person)
-  else
-    return null;
+  return momsBirthYearFor(person) ? person.born - momsBirthYearFor(person) : null
 }
 
 function average(array) {
